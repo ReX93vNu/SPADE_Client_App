@@ -9,6 +9,7 @@ from frames.calibration import CalibrationFrame
 from frames.ph_calib import PhCalibrationFrame
 from frames.n_calib import NCalibrationFrame
 from frames.k_calib import KCalibrationFrame
+from frames.p_calib import PCalibrationFrame
 # from frames.start_frame import StartFrame
 # from frames.history_frame import HistoryFrame
 
@@ -26,7 +27,7 @@ class SpadeApp(ctk.CTk):
 
         self.frames = {}
         # Ensure all frames are listed here
-        for F in (MainMenuFrame, SettingsFrame, CalibrationFrame, PhCalibrationFrame, NCalibrationFrame, KCalibrationFrame):
+        for F in (MainMenuFrame, SettingsFrame, CalibrationFrame, PhCalibrationFrame, NCalibrationFrame, KCalibrationFrame, PCalibrationFrame):
             page_name = F.__name__
             frame = F(parent=self, controller=self)
             self.frames[page_name] = frame
